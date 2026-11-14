@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI STORYVERSE</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff0f6;
+    color: #713653;
+    text-align: center;
+}
+
+header {
+    background: #ff80b5;
+    color: white;
+    padding: 25px 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+main {
+    padding: 25px 15px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 20px;
+    box-shadow: 0 3px 12px #e8c5d5;
+}
+
+textarea {
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #f9b6c6;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+button {
+    background: #ff69a6;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    margin: 15px;
+}
+
+#result {
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<header>🌸 AI STORYVERSE 🌸</header>
+
+<main>
+
+<div class="card">
+
+<h2>Create Your Own Story ✨</h2>
+
+<p>Write your story idea below!</p>
+
+<textarea id="idea" placeholder="Enter your story idea..."></textarea>
+
+<br>
+
+<button onclick="makeStory()">Create Story</button>
+
+<h3>Your Story 💗</h3>
+
+<p id="result">Your story will appear here.</p>
+
+</div>
+
+</main>
+
+<script>
+
+function makeStory() {
+
+    let idea = document.getElementById("idea").value;
+
+    if (!idea.trim()) {
+        alert("Please enter a story idea!");
+        return;
+    }
+
+    document.getElementById("result").innerText =
+        "Your story idea: " + idea +
+        "\n\nYour magical story adventure begins here!";
+
+}
+
+</script>
+
+</body>
+</html>
